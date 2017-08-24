@@ -10,6 +10,7 @@ class App extends Component {
   constructor(props) {
     super(props);
 
+
     this.state = {
       videos: [],
       selectedVideo: null
@@ -18,6 +19,7 @@ class App extends Component {
   }
 
   videoSearch(term) {
+    const API_KEY = 'ENTERKEYHERE';
     YTSearch({key: API_KEY, term: term}, (videos) => {
       this.setState({
         videos: videos,
